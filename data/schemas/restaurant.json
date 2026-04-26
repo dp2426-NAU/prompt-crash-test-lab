@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Restaurant Review",
+  "type": "object",
+  "required": ["restaurant_name", "cuisine", "overall_rating"],
+  "properties": {
+    "restaurant_name": {"type": "string"},
+    "cuisine": {"type": "string"},
+    "overall_rating": {"type": "number", "minimum": 1, "maximum": 5},
+    "price_range": {"type": "string", "enum": ["$", "$$", "$$$", "$$$$"]},
+    "recommended_dishes": {"type": "array", "items": {"type": "string"}},
+    "atmosphere": {"type": "string"},
+    "accepts_reservations": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

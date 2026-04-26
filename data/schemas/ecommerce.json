@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "E-commerce Product",
+  "type": "object",
+  "required": ["product_name", "price", "category"],
+  "properties": {
+    "product_name": {"type": "string", "description": "Full product name"},
+    "price": {"type": "number", "minimum": 0, "description": "Price in USD"},
+    "category": {"type": "string", "description": "Product category"},
+    "brand": {"type": "string", "description": "Manufacturer or brand"},
+    "in_stock": {"type": "boolean", "description": "Whether item is available"},
+    "rating": {"type": "number", "minimum": 0, "maximum": 5, "description": "Customer rating out of 5"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Medical Record Summary",
+  "type": "object",
+  "required": ["patient_age", "diagnosis", "treatment"],
+  "properties": {
+    "patient_age": {"type": "integer", "minimum": 0, "maximum": 150},
+    "gender": {"type": "string", "enum": ["male", "female", "other"]},
+    "diagnosis": {"type": "string"},
+    "treatment": {"type": "string"},
+    "medications": {"type": "array", "items": {"type": "string"}},
+    "follow_up_days": {"type": "integer", "minimum": 0},
+    "severity": {"type": "string", "enum": ["mild", "moderate", "severe"]}
+  },
+  "additionalProperties": false
+}
